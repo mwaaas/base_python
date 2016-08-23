@@ -1,12 +1,9 @@
-FROM python:2.7.12-alpine
+FROM python:2.7.12
 
 COPY requirements.txt .
-RUN apk add --update-cache libpq &&\
-    apk add --virtual=build-deps \
-            gcc musl-dev postgresql-dev && \
-    pip install --upgrade pip  && \
-    pip install --no-cache-dir -r requirements.txt  &&\
-    apk del build-deps && rm -rf /var/cache/apk/*
+
+RUN pip install --upgrade pip && \
+    pip install  --no-cache-dir -r requirements.txt
 
 EXPOSE 80
 
