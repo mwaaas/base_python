@@ -1,2 +1,3 @@
-caravel
-psycopg2
+caravel==0.10.0
+psycopg2==2.6.1
+sqlalchemy-redshift==0.5.0
