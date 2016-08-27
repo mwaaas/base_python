@@ -1,4 +1,4 @@
-FROM python:2.7.12
+FROM python:3.5.2
 
 COPY requirements.txt .
 
